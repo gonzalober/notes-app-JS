@@ -1,8 +1,8 @@
 class NoteController {
-  constructor(noteList = new Noteslist) {
-    this.noteList = notesList;
+  constructor(noteList = new Noteslist()) {
+    this.noteList = noteList;
     this.noteList.createStore("Favourite drink: seltzer");
-    this.noteListView = new NoteListView(this.noteslist);
+    this.noteListView = new NoteListView(this.noteList);
   }
 
   insertHtml() {
@@ -13,7 +13,5 @@ class NoteController {
   }
 }
 
-let newController = new NoteController
-newController.insertHtml();
-
-
+insterNote = new NoteController();
+insterNote.insertHtml();
