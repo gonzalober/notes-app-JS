@@ -13,5 +13,5 @@ class NoteController {
   }
 }
 
-insterNote = new NoteController();
+let insterNote = new NoteController();
 insterNote.insertHtml();
