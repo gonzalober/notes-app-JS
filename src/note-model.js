@@ -1,11 +1,9 @@
-class Note{
-
-  constructor(string){
+class Note {
+  constructor(string) {
     this.content = string;
-  };
+  }
 
-  getContent(){
+  getContent() {
     return this.content;
-  };
-
+  }
 }
