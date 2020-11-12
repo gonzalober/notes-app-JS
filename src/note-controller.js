@@ -7,11 +7,11 @@ class NoteController {
 
   insertHtml() {
     let element = document.getElementById("app");
-    console.log(element);
     let str = this.noteListView.getListView();
     element.innerHTML = str;
   }
 }
 
 let insterNote = new NoteController();
+
 insterNote.insertHtml();
