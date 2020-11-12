@@ -1,6 +1,7 @@
 class Note {
-  constructor(string) {
+  constructor(string, noteId) {
     this.content = string;
+    this.id = noteId;
   }
 
   getContent() {
