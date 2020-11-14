@@ -12,6 +12,35 @@ class NoteController {
   }
 }
 
-let insterNote = new NoteController();
+function makeUrlChangeShowNoteForCurrentPage() {
+  window.addEventListener("hashchange", showNoteforCurrentPage);
+}
 
-insterNote.insertHtml();
+function showNoteforCurrentPage() {
+  showFullNote(getNoteUrl(window.location));
+}
+
+function getNoteUrl(location) {
+  let url1 = location.hash.split("#")[1];
+  return url1.split("/")[1];
+}
+
+function showFullNote(noteID) {
+  // let noteArr = noteController.noteList.getList();
+  let noteContent = noteController.noteList.getList()[noteID].getContent();
+  document.getElementById("app").innerHTML = `<div>${noteContent}</div>`;
+
+  // for (let i = 0; i < noteArr.length; i++) {
+  //   if (noteID == noteArr[i].id) {
+  //     let singleNoteView = new SingleNoteView(noteArr[i]);
+  //     let noteHTML = singleNoteView.returnHtmlNote();
+  //     document.getElementById("app").innerHTML = noteHTML;
+  //   }
+  // }
+}
+
+let noteController = new NoteController();
+noteController.noteList.createStore("blah blah");
+noteController.noteList.createStore("hi Mai, how are you today?");
+noteController.insertHtml();
+makeUrlChangeShowNoteForCurrentPage();
