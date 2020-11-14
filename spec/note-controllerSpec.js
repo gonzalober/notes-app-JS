@@ -11,11 +11,11 @@
 (function makeUrlChangeShowForCurrentPage() {
   let linkElement0 = document.getElementById("0");
   // let linkElement1 = document.getElementById("1");
-  console.log(linkElement0);
+  // console.log(linkElement0);
   linkElement0.click();
   // console.log(linkElement1);
   // linkElement1.click();
   let element2 = document.getElementById("0");
-  console.log(linkElement0.innerHTML);
+  // console.log(linkElement0.innerHTML);
   assert.isTrue(element2.innerHTML == "Favourite drink: sel...");
 })(this);

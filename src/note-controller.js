@@ -21,8 +21,8 @@ function showNoteforCurrentPage() {
 }
 
 function getNoteUrl(location) {
-  let url1 = location.hash.split("#")[1];
-  return url1.split("/")[1];
+  // let url1 = location.hash.split("#")[1];
+  return location.hash.split("/")[1];
 }
 
 function showFullNote(noteID) {

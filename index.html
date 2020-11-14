@@ -5,14 +5,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Note App</title>
-  </head>
-  <body>
     <div id="app">Hello</div>
-
     <script src="src/note-model.js"></script>
     <script src="src/note-list-model.js"></script>
     <script src="src/note-list-view.js"></script>
     <script src="src/note-controller.js"></script>
     <script src="src/single-note-view.js"></script>
+  </head>
+  <body>
+    <textarea
+      id="newNote"
+      form="text"
+      placeholder="Please enter a new note"
+    ></textarea>
+    <form id="text" method="POST" action="#note/create">
+      <input type="submit" value="Submit" />
+    </form>
   </body>
 </html>
